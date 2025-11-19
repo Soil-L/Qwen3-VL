@@ -1,0 +1,9 @@
+pip install torch==2.6.0
+pip install torchvision==0.21.0
+pip install transformers==4.57.0
+pip install deepspeed==0.17.1
+pip install flash_attn-2.7.4.post1+cu12torch2.6cxx11abiTRUE-cp312-cp312-linux_x86_64
+pip install triton==3.2.0
+pip install accelerate==1.7.0
+pip install torchcodec==0.2
+pip install peft==0.17.1

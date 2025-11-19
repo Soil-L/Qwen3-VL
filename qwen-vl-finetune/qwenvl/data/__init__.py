@@ -1,37 +1,43 @@
 import re
 
 # Define placeholders for dataset paths
-CAMBRIAN_737K = {
-    "annotation_path": "PATH_TO_CAMBRIAN_737K_ANNOTATION",
-    "data_path": "",
-}
+# CAMBRIAN_737K = {
+#     "annotation_path": "PATH_TO_CAMBRIAN_737K_ANNOTATION",
+#     "data_path": "",
+# }
 
-CAMBRIAN_737K_PACK = {
-    "annotation_path": f"PATH_TO_CAMBRIAN_737K_ANNOTATION_PACKED",
-    "data_path": f"",
-}
+# CAMBRIAN_737K_PACK = {
+#     "annotation_path": f"PATH_TO_CAMBRIAN_737K_ANNOTATION_PACKED",
+#     "data_path": f"",
+# }
 
-MP_DOC = {
-    "annotation_path": "PATH_TO_MP_DOC_ANNOTATION",
-    "data_path": "PATH_TO_MP_DOC_DATA",
-}
+# MP_DOC = {
+#     "annotation_path": "PATH_TO_MP_DOC_ANNOTATION",
+#     "data_path": "PATH_TO_MP_DOC_DATA",
+# }
 
-CLEVR_MC = {
-    "annotation_path": "PATH_TO_CLEVR_MC_ANNOTATION",
-    "data_path": "PATH_TO_CLEVR_MC_DATA",
-}
+# CLEVR_MC = {
+#     "annotation_path": "PATH_TO_CLEVR_MC_ANNOTATION",
+#     "data_path": "PATH_TO_CLEVR_MC_DATA",
+# }
 
-VIDEOCHATGPT = {
-    "annotation_path": "PATH_TO_VIDEOCHATGPT_ANNOTATION",
-    "data_path": "PATH_TO_VIDEOCHATGPT_DATA",
+# VIDEOCHATGPT = {
+#     "annotation_path": "PATH_TO_VIDEOCHATGPT_ANNOTATION",
+#     "data_path": "PATH_TO_VIDEOCHATGPT_DATA",
+# }
+
+TEST_DATASET = {
+    "annotation_path": "/root/autodl-tmp/Qwen3-VL/qwen-vl-finetune/demo/single_images.json",
+    "data_path": "/root/autodl-tmp/Qwen3-VL/qwen-vl-finetune/demo/images",  # Can be empty if paths are in annotations
 }
 
 data_dict = {
-    "cambrian_737k": CAMBRIAN_737K,
-    "cambrian_737k_pack": CAMBRIAN_737K_PACK,
-    "mp_doc": MP_DOC,
-    "clevr_mc": CLEVR_MC,
-    "videochatgpt": VIDEOCHATGPT,
+    "test_dataset": TEST_DATASET,
+    # "cambrian_737k": CAMBRIAN_737K,
+    # "cambrian_737k_pack": CAMBRIAN_737K_PACK,
+    # "mp_doc": MP_DOC,
+    # "clevr_mc": CLEVR_MC,
+    # "videochatgpt": VIDEOCHATGPT,
 }
 
 
@@ -57,7 +63,7 @@ def data_list(dataset_names):
 
 
 if __name__ == "__main__":
-    dataset_names = ["cambrian_737k"]
+    dataset_names = ["test_dataset%100"]
     configs = data_list(dataset_names)
     for config in configs:
         print(config)
